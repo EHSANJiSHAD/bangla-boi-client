@@ -1,0 +1,23 @@
+[
+    {
+      "id": "6280c29393d29efd74c40169",
+      "img": "https://www.amarbooks.org/thumbs/1573737896.jpg",
+      "price": 350,
+      "name": "Srikanta",
+      "ratings": 5
+    },
+    {
+      "id": "6280c29356716340d04f9246",
+      "img": "https://allbanglaboi.com/wp-content/uploads/2020/04/Criminal-Masud-Rana-Books.jpg",
+      "price": 290,
+      "name": "Masud Rana - Criminal",
+      "ratings": 4.7
+    },
+    {
+      "id": "6280c2932a4cece966d71b5b",
+      "img": "https://allboi.com/wp-content/uploads/2020/03/Srabon-Megher-Din-by-Humayun-185x278-1.jpg",
+      "price": 250,
+      "name": "Srabon Megher Din",
+      "ratings": 4.8
+    }
+  ]

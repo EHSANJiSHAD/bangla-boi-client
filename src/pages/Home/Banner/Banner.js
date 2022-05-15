@@ -10,7 +10,7 @@ import banner3 from '../../../images/banner/4.jpg'
 const Banner = () => {
     return (
         <div>
-            <Carousel variant="white">
+            <Carousel variant="white" fade="true" interval="3000">
                 <Carousel.Item>
                     <img
                         className="d-block w-100 carousel-img"

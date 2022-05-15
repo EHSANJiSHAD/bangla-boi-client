@@ -5,7 +5,8 @@ import React from 'react';
 const Item = ({item}) => {
     const {name,price,description,img} = item;
     return (
-        <div className='item-container container'>
+        <div className='container'>
+            <div className='item-container'>
             <div className="item">
                 <img className='item-image shadow-lg' src={img} />
                 <h4 className='item-text'>{name.toUpperCase()}</h4>
@@ -18,6 +19,7 @@ const Item = ({item}) => {
                     DETAILS
                 </button>
             </div>
+        </div>
         </div>
     );
 };

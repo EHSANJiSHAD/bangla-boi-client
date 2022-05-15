@@ -1,0 +1,18 @@
+.discount-container img{
+    
+}
+
+.discount-container{
+    background-image: url("../../../images/banner/5.jpg");
+    /* opacity: .6; */
+    background-blend-mode:luminosity;
+}
+
+.discount-sub-container{
+    display: grid;
+    opacity: none;
+    grid-template-columns: repeat(2,1fr);
+}
+.discount-carousel{
+    border: none;
+}

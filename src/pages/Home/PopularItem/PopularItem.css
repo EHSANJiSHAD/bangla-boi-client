@@ -1,0 +1,17 @@
+.item{
+    transition: .5s;
+}
+.item:hover{
+    transform: scale(1.02);
+}
+
+.ratings{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.ratings small{
+    margin-left: 5px;
+    margin-top: -10px;
+    font-size: 12px;
+}

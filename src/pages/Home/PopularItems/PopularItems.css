@@ -1,0 +1,5 @@
+.popular-container{
+    box-shadow: -20px -20px 45px #edeff1, 20px 20px 45px #cacfd8;
+    border: 1px solid gray ;
+    border-radius: 20px;
+}

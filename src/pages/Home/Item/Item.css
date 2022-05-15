@@ -12,6 +12,8 @@
     font-family: 'Wallpoet', cursive;
     color: rgb(130 180 64);
     font-size: 20px;
+    box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
+    /* border-radius: 10px; */
 }
 .item small{
     color: gray;
@@ -20,8 +22,11 @@
 .item-container{
     box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
     border-radius: 20px;
-    /* margin: 5px auto; */
     border: 1px solid rgb(130 180 64);
+    transition: .5s;
+}
+.item-container:hover{
+    transform: scale(1.02);
 }
 .btn{
     position: relative;
