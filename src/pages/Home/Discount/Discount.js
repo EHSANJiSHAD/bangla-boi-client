@@ -7,12 +7,11 @@ import { Carousel } from 'react-bootstrap';
 const Discount = () => {
     return (
         <div className='discount-container mt-5'>
-            {/* <img className='d-block w-100 ' src={background}></img> */}
-            <h2>DISCOUNT</h2>
+        
             <div className='container text-white discount-sub-container'>
                 <div>
-                    <div>
-                    <h2>Start a new series - Up to 50% off</h2>
+                    <div className='discount-text'>
+                    <h2>START A NEW SERIES - UP TO 50% OFF</h2>
                     <p>we has the weekly promotion, keep up with us and you’ll get the best deal to get your loved stuff. Our design reflects the purity of contemporary forms for enduring appeal.</p>
 
                     </div>
