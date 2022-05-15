@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
+
+.nav-bar a {
+    
+    text-decoration: none;
+    box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
+    border: 1px solid rgb(130 180 64);
+    border-radius: 25px;
+    color: rgb(130 180 64);
+    transition: .5s;
+    padding: 5px;
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 18px;
+    margin: 20px;
+    
+    
+
+}
+.logout-btn{
+    text-decoration: none;
+    box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
+    border-radius: 25px;
+    color: gray;
+    border: 1px solid rgb(130 180 64);
+    font-weight: 800;
+    font-size: 18px;
+    margin: 20px;
+    transition: .5s;
+    padding: 5px;
+    margin-top: 20px;
+    border: none;
+    background-color: transparent;
+}
+.logout-btn:hover{
+    box-shadow: -20px -20px 45px #edeff1, 20px 20px 45px #cacfd8;
+    transform: scale(1.2);
+}
+.nav-bar a:hover{
+    box-shadow: -20px -20px 45px #edeff1, 20px 20px 45px #cacfd8;
+    transform: scale(1.2);
+}
+
+.nav-bar-bg{
+    box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
+    border: 1px solid rgb(130 180 64);
+    /* border-radius: 15px; */
+}
+
+.text a{
+    color: rgb(130 180 64);
+}
+.text{
+    font-family: 'Rubik Puddles', cursive;
+    /* font-family: 'Monoton', cursive; */
+    font-size: 30px;
+    background-color: rgb(130 180 64);
+    letter-spacing: 5px;
+    
+    
+}
+
+@media only screen and (max-width:477px) {
+    .nav-bar a{
+        display: flex;
+        margin-bottom: 5px;
+        color: gray;
+        margin-top: 10px;
+        justify-content: center;
+        transition: .5s;
+        
+    }
+
+    .nav-bar a:hover{
+        box-shadow: -20px -20px 45px #edeff1, 20px 20px 45px #cacfd8;
+        transform: scale(1.05);
+    }
+    .nav-bar-bg{
+        background-color: transparent;
+    }
+}
+
+@media only screen and (max-width:312px) {
+    .text{
+        font-size: 12px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

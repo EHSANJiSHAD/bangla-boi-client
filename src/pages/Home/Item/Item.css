@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Wallpoet&display=swap');
+.item-image{
+    margin-top: 10px;
+    height: 170px;
+    width: 170px;
+    opacity: .6;
+    border: 1px solid rgb(130 180 64);
+    border-radius: 20px;
+    box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
+}
+.item-text{
+    font-family: 'Wallpoet', cursive;
+    color: rgb(130 180 64);
+    font-size: 20px;
+}
+.item small{
+    color: gray;
+}
+
+.item-container{
+    box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
+    border-radius: 20px;
+    /* margin: 5px auto; */
+    border: 1px solid rgb(130 180 64);
+}
+.btn{
+    position: relative;
+    left: 0%;
+    width: 90px;
+    height: 85px;
+    font-weight: 500;
+    text-align: center;
+    right: 0;
+    border-radius: 50%;
+    box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
+    color: gray;
+    padding: 3px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.btn:hover{
+    box-shadow: -20px -20px 45px #edeff1, 20px 20px 45px #cacfd8;
+    transform: scale(1.02);
+    color: rgb(130 180 64);
+    font-weight: 500;
+}
+
+@media only screen and (max-width:688px) {
+    .item-image{
+        height: 160px;
+        width: 160px;
+    }
+}

@@ -1,0 +1,9 @@
+.carousel-img{
+    opacity: .8;
+    height: 450px;
+    border-radius: 20px;
+    border: 2px solid rgb(130 180 64);
+    margin-bottom: 20px;
+    box-shadow: -20px -20px 45px #edeff1, 20px 20px 45px #cacfd8;
+    /* box-shadow: -15px -15px -15px black; */
+}
