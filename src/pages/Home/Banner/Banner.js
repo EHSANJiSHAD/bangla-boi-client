@@ -8,6 +8,7 @@ import banner2 from '../../../images/banner/2.jpg'
 import banner3 from '../../../images/banner/4.jpg'
 
 const Banner = () => {
+    
     return (
         <div>
             <Carousel variant="white" fade="true" interval="3000">

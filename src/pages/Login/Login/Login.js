@@ -1,6 +1,6 @@
 import './Login.css'
 import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Spinner } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
 import 'react-toastify/dist/ReactToastify.css';
@@ -84,7 +84,7 @@ const Login = () => {
                 
                 <p className='nav-bar-bg' style={{color:'#991c0c'}}>{error?.message}</p>
                 {
-                    loading && <p className='nav-bar-bg'>LOADING...</p>
+                    loading && <p className='nav-bar-bg'><Spinner animation="border" variant="secondary" /></p>
                 }
                 <Button className='mb-5' variant="btn" type="submit">
                     LOG IN

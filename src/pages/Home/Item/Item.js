@@ -4,7 +4,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Item = ({item}) => {
-    const {id,name,price,description,img,quantity,supplier_name} = item;
+    const {_id,name,price,description,img,quantity,supplier_name} = item;
 
 
     const navigate = useNavigate();
@@ -13,6 +13,7 @@ const Item = ({item}) => {
     }
     return (
         <div className='container'>
+            
             <div className='item-container'>
             <div className="item">
                 <img className='item-image shadow-lg' src={img} />
@@ -25,7 +26,7 @@ const Item = ({item}) => {
             <div>
                 <hr></hr>
                 <h5 className='item-text'>{price} tk</h5>
-                <button onClick={()=>handleUpdateButton(id)} className='btn' >
+                <button onClick={()=>handleUpdateButton(_id)} className='btn' >
                     UPDATE
                 </button>
             </div>

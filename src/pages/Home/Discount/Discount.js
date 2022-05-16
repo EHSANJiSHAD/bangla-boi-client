@@ -5,6 +5,7 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 
 const Discount = () => {
+   
     return (
         <div className='discount-container mt-5'>
         

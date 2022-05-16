@@ -100,7 +100,7 @@ const Signup = () => {
                 <p className='mt-2 px-2'>OR</p>
                 <div style={{ height: '1px' }} className='bg-secondary w-50'></div>
             </div>
-            {/* {errorElement}; */}
+            
             {googleErrorMsg}
             <button onClick={() => signInWithGoogle()} className='logout-btn '>
                 <img style={{ width: '30px', paddingBottom: '4px', marginRight: '2px' }} src={googleIcon} alt="" />

@@ -2,12 +2,13 @@ import './Items.css'
 
 import React, { useEffect, useState } from 'react';
 import Item from '../Item/Item';
+import { Spinner } from 'react-bootstrap';
 
 const Items = () => {
     const [items,setItems] = useState([]);
 
     useEffect(()=>{
-        fetch('items.json')
+        fetch(`http://localhost:5000/book`)
         .then(res=>res.json())
         .then(data=>setItems(data))
     },[])
@@ -19,12 +20,13 @@ const Items = () => {
                     {
                         items.map(item=>
                             <Item 
-                            key={item.id}
+                            key={item._id}
                             item={item}
                             >     
                             </Item>)
                     }
             </div>
+            {/* {items ? items : <Spinner animation="border" variant="secondary" />} */}
         </div>
     );
 };
