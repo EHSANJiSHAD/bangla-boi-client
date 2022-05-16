@@ -1,18 +1,23 @@
 import './Signup.css'
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
+    //////////////////////SEND EMAIL VERIFICATION/////////////////////
+    const [sendEmailVerification, sending] = useSendEmailVerification(
+        auth);
+    //////////////////////SEND EMAIL VERIFICATION/////////////////////
+
     //////////////////////////CREATE USER HOOK///////////////////////
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification : true});
     //////////////////////////CREATE USER HOOK///////////////////////
 
     const [error1,setError1] = useState([]);
@@ -38,6 +43,8 @@ const Signup = () => {
         }
         createUserWithEmailAndPassword(email,password);
     }
+
+    
 
     const navigate = useNavigate();
     if(user){

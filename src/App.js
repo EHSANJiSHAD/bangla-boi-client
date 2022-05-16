@@ -6,6 +6,7 @@ import Home from './pages/Home/Home/Home';
 import Footer from './pages/Shared/Footer/Footer';
 import Login from './pages/Login/Login/Login';
 import Signup from './pages/Login/Signup/Signup';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         </Routes>
 
         <Footer></Footer>
+
+        <ToastContainer></ToastContainer>
     </div>
   );
 }
