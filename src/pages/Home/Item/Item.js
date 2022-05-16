@@ -4,12 +4,12 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Item = ({item}) => {
-    const {name,price,description,img,quantity,supplier_name} = item;
+    const {id,name,price,description,img,quantity,supplier_name} = item;
 
 
     const navigate = useNavigate();
-    const handleUpdateButton = ()=>{
-       navigate('/manage');
+    const handleUpdateButton = (id)=>{
+       navigate(`/manage/${id}`);
     }
     return (
         <div className='container'>
@@ -25,7 +25,7 @@ const Item = ({item}) => {
             <div>
                 <hr></hr>
                 <h5 className='item-text'>{price} tk</h5>
-                <button onClick={handleUpdateButton} className='btn' >
+                <button onClick={()=>handleUpdateButton(id)} className='btn' >
                     UPDATE
                 </button>
             </div>
