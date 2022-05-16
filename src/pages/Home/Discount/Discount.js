@@ -11,15 +11,15 @@ const Discount = () => {
             <div className='container text-white discount-sub-container'>
                 <div>
                     <div className='discount-text'>
-                    <h2>START A NEW SERIES - UP TO 50% OFF</h2>
-                    <p>we has the weekly promotion, keep up with us and you’ll get the best deal to get your loved stuff. Our design reflects the purity of contemporary forms for enduring appeal.</p>
+                    <h2>START A NEW SERIES</h2>
+                    <p>WE ALSO HAVE FOREIGN LANGUAGE BOOKS TRANSLATED INTO BENGALI. TRY OUT OUR BENGALI TRANSLATED BOOKS AND GET EXTRA GEM POINTS TO UNLOCK NEW FEATURES.</p>
 
                     </div>
                    
                    
                 </div>
                 <div>
-                <Carousel variant="white" fade="true" interval="3000">
+                <Carousel variant="white" fade="true"  interval="3000">
                 <Carousel.Item>
                     <img
                         className="d-block w-100 carousel-img discount-carousel"

@@ -3,7 +3,7 @@ import './Item.css'
 import React from 'react';
 
 const Item = ({item}) => {
-    const {name,price,description,img} = item;
+    const {name,price,description,img,quantity,supplier_name} = item;
     return (
         <div className='container'>
             <div className='item-container'>
@@ -11,12 +11,15 @@ const Item = ({item}) => {
                 <img className='item-image shadow-lg' src={img} />
                 <h4 className='item-text'>{name.toUpperCase()}</h4>
                 <small>{description.slice(0,80)}...</small>
+                <hr/>
+                <h6 className='item-text fs-6'>QUANTITY: {quantity}</h6>
+                <small>SUPPLIER NAME: {supplier_name.toUpperCase()}</small>
             </div>
             <div>
                 <hr></hr>
                 <h5 className='item-text'>{price} tk</h5>
                 <button className='btn' >
-                    DETAILS
+                    UPDATE
                 </button>
             </div>
         </div>

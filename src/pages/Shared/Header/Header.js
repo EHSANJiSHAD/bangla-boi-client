@@ -3,8 +3,16 @@ import './Header.css'
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+
+    const handleLogOut = () =>{
+        signOut(auth);
+    }
     return (
         <div className=' rounded-pill'>
             <Navbar collapseOnSelect expand="lg"  >
@@ -15,6 +23,12 @@ const Header = () => {
                         
                             <Link to='/home' >HOME</Link>
                             <Link to='/blogs' >BLOGS</Link>
+                            {
+                                user?
+                                <button className='logout-btn' onClick={handleLogOut}>LOG OUT</button>
+                                :
+                                <Link to='/login' >LOGIN</Link>
+                            }
 
                        
                     </Navbar.Collapse>

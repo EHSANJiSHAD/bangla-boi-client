@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Wallpoet&display=swap');
 .discount-container{
-    background-image: url("../../../images/banner/5.jpg");
-    opacity: .8;
+    background-image: url("../../../images/banner/6.jpg");
     background-blend-mode:luminosity;
     background-size: cover;
-    filter: blur(8x);
+    /* filter: blur(8x); */
     border-radius: 10px;
     box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
 
-    /* -webkit-filter: blur(8px); */
 }
 
 .discount-text{
@@ -30,4 +28,14 @@
 }
 .discount-carousel{
     border: none;
+}
+
+@media only screen and (max-width:688px){
+    .discount-sub-container{
+        display: grid;
+        
+        grid-template-columns: repeat(1,1fr);
+        
+        
+    }
 }
