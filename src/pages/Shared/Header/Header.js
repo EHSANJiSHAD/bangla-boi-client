@@ -25,7 +25,7 @@ const Header = () => {
                             <Link to='/blogs' >BLOGS</Link>
                             {
                                 user?
-                                <button className='logout-btn' onClick={handleLogOut}>LOG OUT</button>
+                                <button style={{color:"rgb(130 180 64)",border:"1px solid rgb(130 180 64)"}} className='logout-btn' onClick={handleLogOut}>LOG OUT</button>
                                 :
                                 <Link to='/login' >LOGIN</Link>
                             }

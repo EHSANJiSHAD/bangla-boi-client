@@ -1,11 +1,25 @@
 import './Signup.css'
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
+import googleIcon from '../../../images/icons/google.png'
+
 
 const Signup = () => {
+    ///////////////////GOOGLE SIGN IN//////////////////
+    const [signInWithGoogle, user1, loading1, error2] = useSignInWithGoogle(auth);
+
+    let googleErrorMsg;
+    if (error2) {
+
+        googleErrorMsg = <div>
+            <p className='nav-bar-bg'>Error: {error2.message}</p>
+        </div>
+
+    }
+    ///////////////////GOOGLE SIGN IN//////////////////
     //////////////////////SEND EMAIL VERIFICATION/////////////////////
     const [sendEmailVerification, sending] = useSendEmailVerification(
         auth);
@@ -78,6 +92,23 @@ const Signup = () => {
 
                 
             </Form>
+
+            {/* SOCIAL LOGIN */}
+            <div>
+            <div className='d-flex align-items-center'>
+                <div style={{ height: '1px' }} className='bg-secondary w-50'></div>
+                <p className='mt-2 px-2'>OR</p>
+                <div style={{ height: '1px' }} className='bg-secondary w-50'></div>
+            </div>
+            {/* {errorElement}; */}
+            {googleErrorMsg}
+            <button onClick={() => signInWithGoogle()} className='logout-btn '>
+                <img style={{ width: '30px', paddingBottom: '4px', marginRight: '2px' }} src={googleIcon} alt="" />
+                <span>GOOGLE SIGN IN</span>
+            </button>
+        </div>
+            {/* SOCIAL LOGIN */}
+
         </div>
     );
 };

@@ -1,14 +1,27 @@
 import './Login.css'
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
-import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
-
+import 'react-toastify/dist/ReactToastify.css';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import googleIcon from '../../../images/icons/google.png'
 
 
 const Login = () => {
+    ///////////////////GOOGLE SIGN IN//////////////////
+    const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
+
+    let googleErrorMsg;
+    if (error1) {
+
+        googleErrorMsg = <div>
+            <p className='nav-bar-bg'>Error: {error1.message}</p>
+        </div>
+
+    }
+    ///////////////////GOOGLE SIGN IN//////////////////
     //SIGN IN WITH EMAIL PASS(HOOKS)
     const [
         signInWithEmailAndPassword,
@@ -46,10 +59,18 @@ const Login = () => {
     }
     /////////////////RESET PASSWORD///////////////
 
+
+    //////////////////////REDIRECT AFTER LOGIN/////////////////////////
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/home";
+    //////////////////////REDIRECT AFTER LOGIN/////////////////////////
     const navigate = useNavigate();
-    if(user){
-        navigate('/');
+    if(user||user1){
+        // navigate('/')
+        navigate(from, { replace: true });
     }
+
+    
     return (
         <div className='login-div container'>
             <Form className='form-div' onSubmit={handleSubmit}>
@@ -69,8 +90,23 @@ const Login = () => {
                     LOG IN
                 </Button>
                 <p>NEW TO SELF-MADE? <Link className='form-link' to='/signup' >SIGN UP</Link> </p>
-                <p>Forget Password? <button onClick={handleResetPassword} className='logout-btn   pe-auto text-decoration-none' >RESET PASSWORD</button> </p>
+                
             </Form>
+            <p>Forget Password? <button onClick={handleResetPassword} className='logout-btn   pe-auto text-decoration-none' >RESET PASSWORD</button> </p>
+
+            <div>
+            <div className='d-flex align-items-center'>
+                <div style={{ height: '1px' }} className='bg-secondary w-50'></div>
+                <p className='mt-2 px-2'>OR</p>
+                <div style={{ height: '1px' }} className='bg-secondary w-50'></div>
+            </div>
+            
+            {googleErrorMsg}
+            <button onClick={() => signInWithGoogle()} className='logout-btn '>
+                <img style={{ width: '30px', paddingBottom: '4px', marginRight: '2px' }} src={googleIcon} alt="" />
+                <span>GOOGLE SIGN IN</span>
+            </button>
+        </div>
         </div>
     );
 };
