@@ -1,0 +1,21 @@
+.product-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    opacity: .8;
+}
+.table-style{
+    box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
+    border-radius: 10px;
+    background-color: #cacfd8;
+}
+
+.dlt-btn{
+    border: none;
+    transition: .5s;
+    box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
+    border-radius: 50%;
+}
+.dlt-btn:hover{
+    transform: scale(1.2);
+}

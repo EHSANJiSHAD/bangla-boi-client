@@ -8,7 +8,7 @@ const PopularItems = () => {
         const [popularItems,setPopularItems] = useState([]);
     
         useEffect(()=>{
-            fetch('popularItems.json')
+            fetch('http://localhost:5000/book')
             .then(res=>res.json())
             .then(data=>setPopularItems(data))
         },[])
@@ -19,9 +19,9 @@ const PopularItems = () => {
             </div>
             <div className='items-container popular-container'>
             {
-                        popularItems.map(popularItem=>
+                        popularItems.slice(5,8).map(popularItem=>
                             <PopularItem 
-                            key={popularItem.id}
+                            key={popularItem._id}
                             popularItem={popularItem}
                             >     
                             </PopularItem>)
