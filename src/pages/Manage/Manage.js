@@ -1,6 +1,6 @@
 import './Manage.css'
 import React, { useEffect, useRef, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 import { Button, Form } from 'react-bootstrap';
@@ -63,8 +63,21 @@ const Manage = () => {
         })
     }
     /////////////////////////RESTOCK///////////////////////////
+
+    const navigate = useNavigate();
+    const handleManageInventory=()=>{
+        navigate(`/manageInventory`);
+    }
+
     return (
-        <div className='container book-details'>
+        <div>
+            <div className='bg-shadow'>
+            <button className='btn manage-inventory-btn fw-bolder' >
+                <small onClick={handleManageInventory}>MANAGE INVENTORIES</small>
+            </button>
+            </div>
+            <div className='container book-details'>
+            
             <img className='w-50' src={bookItem.img} alt="" />
             <h3 className='item-text fs-3 item-name'>{bookItem.name}</h3>
             <small className='book-text id'>ID: {bookItem._id}</small>
@@ -89,6 +102,7 @@ const Manage = () => {
             
             
 
+        </div>
         </div>
     );
 };

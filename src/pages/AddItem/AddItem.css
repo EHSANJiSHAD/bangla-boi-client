@@ -1,0 +1,21 @@
+.add-item-text-field{
+    box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: gray;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.add-item-text-field:hover{
+    transform: scale(1.01);
+}
+.add-item-text-field:focus{
+    background-color: #e0e4eb;
+    border: gray;
+    transform: scale(1.01);
+    color: gray;
+    font-weight: 600;
+    color: rgb(130 180 64);
+}

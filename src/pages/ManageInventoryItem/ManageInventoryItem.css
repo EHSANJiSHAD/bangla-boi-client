@@ -19,3 +19,6 @@
 .dlt-btn:hover{
     transform: scale(1.2);
 }
+.description-text{
+    font-size: 11px;
+}

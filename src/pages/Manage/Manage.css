@@ -12,6 +12,10 @@
     opacity: .7;
     box-shadow: -5px -5px 8px #edeff1, 5px 5px 10px #cacfd8;
     border: 2px solid rgb(130 180 64);
+    transition: .5s;
+}
+.book-details img:hover{
+    transform: scale(1.02);
 }
 
 .book-text{

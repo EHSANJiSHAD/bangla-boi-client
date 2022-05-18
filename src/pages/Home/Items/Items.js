@@ -32,7 +32,7 @@ const Items = () => {
                             </Item>)
                     }
             </div>
-            <button className='btn manage-inventory-btn' >
+            <button className='btn manage-inventory-btn fw-bolder' >
                 <small onClick={handleManageInventory}>MANAGE INVENTORIES</small>
             </button>
         </div>

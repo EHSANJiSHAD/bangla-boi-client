@@ -1,13 +1,12 @@
-import './ManageInventoryItem.css'
-import React, { useRef } from 'react';
-import { Button, Form, Table } from 'react-bootstrap';
+import './MyItem.css'
+import React from 'react';
 import { MdDelete } from 'react-icons/md';
-import { toast } from 'react-toastify';
+import { Table } from 'react-bootstrap';
 
 
-const ManageInventoryItem = ({ item }) => {
-    const { _id, name, description, price, quantity, sold, supplier_name, img } = item;
-
+const MyItem = ({ item }) => {
+    const { _id, name, description, price, quantity, sold, supplier_name, img,email } = item;
+    console.log(email);
     const handleDeleteItem = id => {
         const proceed = window.confirm('ARE YOU SURE YOU WANT TO DELETE?');
         if (proceed) {
@@ -22,7 +21,6 @@ const ManageInventoryItem = ({ item }) => {
                 })
         }
     }
-
     return (
         <div>
             <div className='container table-style'>
@@ -36,7 +34,6 @@ const ManageInventoryItem = ({ item }) => {
                             <th>SOLD</th>
                             <th>QUANTITY</th>
                             <th>SUPPLIER</th>
-                            {/* <th>RESTOCK</th> */}
                             <th>DELETE</th>
                         </tr>
                     </thead>
@@ -50,7 +47,6 @@ const ManageInventoryItem = ({ item }) => {
                             <td><h6 >{sold}</h6></td>
                             <td><h6 >{quantity}</h6></td>
                             <td><h6 >{supplier_name}</h6></td>
-    
                             <td><h5 ><button onClick={() => handleDeleteItem(_id)} className='dlt-btn'><MdDelete></MdDelete></button></h5></td>
                         </tr>
 
@@ -61,4 +57,4 @@ const ManageInventoryItem = ({ item }) => {
     );
 };
 
-export default ManageInventoryItem;
+export default MyItem;

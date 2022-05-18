@@ -9,6 +9,7 @@ import { signOut } from 'firebase/auth';
 
 const Header = () => {
     const [user] = useAuthState(auth);
+    // console.log(user.email);
 
     const handleLogOut = () =>{
         signOut(auth);
@@ -22,6 +23,14 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav" className='nav-bar nav-bar-bg rounded-pill ' >
                         
                             <Link to='/home' >HOME</Link>
+                            {
+                                user && 
+                                <>
+                                    <Link to='/addItem' >ADD</Link>
+                                    <Link to='/manageInventory' >MANAGE</Link>
+                                    <Link to='/myItems' >MY ITEMS</Link>
+                                </>
+                            }
                             <Link to='/blogs' >BLOGS</Link>
                             {
                                 user?
