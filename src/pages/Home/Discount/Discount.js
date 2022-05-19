@@ -12,8 +12,8 @@ const Discount = () => {
             <div className='container text-white discount-sub-container'>
                 <div>
                     <div className='discount-text'>
-                    <h2>START A NEW SERIES</h2>
-                    <p>WE ALSO HAVE FOREIGN LANGUAGE BOOKS TRANSLATED INTO BENGALI. TRY OUT OUR BENGALI TRANSLATED BOOKS AND GET EXTRA GEM POINTS TO UNLOCK NEW FEATURES.</p>
+                    <h2>STARTING A NEW SERIES</h2>
+                    <p>SOON WE WILL ALSO ADD FOREIGN LANGUAGE BOOKS TRANSLATED INTO BENGALI. SO IT'S TIME TO UPGRADE YOUR INVENTORY!</p>
 
                     </div>
                    

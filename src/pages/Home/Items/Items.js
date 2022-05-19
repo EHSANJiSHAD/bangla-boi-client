@@ -7,11 +7,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 const Items = () => {
     const [items,setItems] = useState([]);
-    // const {_id} = useParams();
     useEffect(()=>{
         fetch(`http://localhost:5000/book`)
         .then(res=>res.json())
-        .then(data=>setItems(data))
+        .then(data=>{
+            setItems(data);
+           
+        })
     },[])
 
     const navigate = useNavigate();
@@ -20,6 +22,7 @@ const Items = () => {
     }
     return (
         <div>
+           
             <h3 className='items-header-text'>INVENTORY ITEMS</h3>
             
             <div className='items-container'>
@@ -28,6 +31,7 @@ const Items = () => {
                             <Item 
                             key={item._id}
                             item={item}
+                
                             >     
                             </Item>)
                     }

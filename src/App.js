@@ -13,6 +13,8 @@ import NotFound from './pages/Shared/NotFound/NotFound';
 import ManageInventory from './pages/ManageInventory/ManageInventory';
 import AddItem from './pages/AddItem/AddItem';
 import MyItems from './pages/MyItems/MyItems';
+import Blogs from './pages/Blogs/Blogs';
+import About from './pages/About/About';
 
 function App() {
   return (
@@ -23,10 +25,11 @@ function App() {
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/home' element={<Home></Home>}></Route>
-          
+          <Route path='/blogs' element={<Blogs></Blogs>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/signup' element={<Signup></Signup>}></Route>
-          <Route path='/manage/:id' element={
+          <Route path='/about' element={<About></About>}></Route>
+          <Route path='/inventory/:id' element={
             <RequireAuth>
               <Manage></Manage>
             </RequireAuth>

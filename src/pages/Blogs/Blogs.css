@@ -1,0 +1,17 @@
+.uppercase{
+    text-transform: uppercase;
+}
+.bg-accordion{
+    background-color: transparent;
+    border-radius: 20px;
+}
+.accordion-button {
+    background-color: transparent !important;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+  /* .accordion-button:not(.collapsed) {
+    color: #212529;
+  } */

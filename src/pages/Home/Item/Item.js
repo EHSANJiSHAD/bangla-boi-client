@@ -2,6 +2,7 @@ import './Item.css'
 
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
 
 const Item = ({ item }) => {
     const { _id, name, price, description, img, quantity, supplier_name } = item;
@@ -9,10 +10,13 @@ const Item = ({ item }) => {
 
     const navigate = useNavigate();
     const handleUpdateButton = (id) => {
-        navigate(`/manage/${id}`);
+        navigate(`/inventory/${id}`);
     }
     return (
         <div>
+             {/* {
+                 item ? item :<Spinner animation="border" variant="secondary" />
+            } */}
             <div className='container'>
 
                 <div className='item-container'>

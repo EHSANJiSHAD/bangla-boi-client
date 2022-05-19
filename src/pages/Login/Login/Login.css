@@ -46,6 +46,9 @@
     color: rgb(72, 199, 13);
 }
 
+.google img{
+    height: 30px;
+}
 @media only screen and (max-width:588px) {
     .login-div{
         width: 100%;

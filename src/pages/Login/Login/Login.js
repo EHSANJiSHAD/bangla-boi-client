@@ -102,7 +102,7 @@ const Login = () => {
             </div>
             
             {googleErrorMsg}
-            <button onClick={() => signInWithGoogle()} className='logout-btn '>
+            <button onClick={() => signInWithGoogle()} className='logout-btn google'>
                 <img style={{ width: '30px', paddingBottom: '4px', marginRight: '2px' }} src={googleIcon} alt="" />
                 <span>GOOGLE SIGN IN</span>
             </button>
