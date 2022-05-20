@@ -11,7 +11,7 @@ const ManageInventoryItem = ({ item }) => {
     const handleDeleteItem = id => {
         const proceed = window.confirm('ARE YOU SURE YOU WANT TO DELETE?');
         if (proceed) {
-            fetch(`http://localhost:5000/book/${id}`, {
+            fetch(`https://murmuring-depths-02769.herokuapp.com/book/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -50,7 +50,7 @@ const ManageInventoryItem = ({ item }) => {
                             <td><h6 >{sold}</h6></td>
                             <td><h6 >{quantity}</h6></td>
                             <td><h6 >{supplier_name}</h6></td>
-    
+
                             <td><h5 ><button onClick={() => handleDeleteItem(_id)} className='dlt-btn'><MdDelete></MdDelete></button></h5></td>
                         </tr>
 

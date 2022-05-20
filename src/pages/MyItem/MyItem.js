@@ -5,12 +5,12 @@ import { Table } from 'react-bootstrap';
 
 
 const MyItem = ({ item }) => {
-    const { _id, name, description, price, quantity, sold, supplier_name, img,email } = item;
+    const { _id, name, description, price, quantity, sold, supplier_name, img, email } = item;
     console.log(email);
     const handleDeleteItem = id => {
         const proceed = window.confirm('ARE YOU SURE YOU WANT TO DELETE?');
         if (proceed) {
-            fetch(`http://localhost:5000/book/${id}`, {
+            fetch(`https://murmuring-depths-02769.herokuapp.com/book/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

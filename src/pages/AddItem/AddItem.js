@@ -7,17 +7,17 @@ const AddItem = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        fetch(`http://localhost:5000/book`,{
+        fetch(`https://murmuring-depths-02769.herokuapp.com/book`, {
             method: 'POST',
-            headers:{
-                'content-type':'application/json'
+            headers: {
+                'content-type': 'application/json'
             },
             body: JSON.stringify(data)
         })
-        .then(res=>res.json())
-        .then(result=>{
-            console.log(result);
-        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
         toast('ITEM ADDED')
     };
 
@@ -36,7 +36,7 @@ const AddItem = () => {
                     <input required className='mb-2 add-item-text-field' placeholder='YOUR NAME' type="text" {...register("supplier_name")} />
                     <input required className='mb-2 add-item-text-field' placeholder='IMAGE URL' type="text" {...register("img")} />
                     <input required className='mb-2 add-item-text-field' placeholder='RATINGS' type="number" step="0.1" {...register("ratings")} />
-                    <input className='mb-2 mt-3 add-item-text-field' type="submit" value='ADD ITEM'/>
+                    <input className='mb-2 mt-3 add-item-text-field' type="submit" value='ADD ITEM' />
                 </form>
             </div>
         </div>

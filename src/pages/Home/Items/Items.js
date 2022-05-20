@@ -6,35 +6,35 @@ import { Spinner } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const Items = () => {
-    const [items,setItems] = useState([]);
-    useEffect(()=>{
-        fetch(`http://localhost:5000/book`)
-        .then(res=>res.json())
-        .then(data=>{
-            setItems(data);
-           
-        })
-    },[])
+    const [items, setItems] = useState([]);
+    useEffect(() => {
+        fetch(`https://murmuring-depths-02769.herokuapp.com/book`)
+            .then(res => res.json())
+            .then(data => {
+                setItems(data);
+
+            })
+    }, [])
 
     const navigate = useNavigate();
-    const handleManageInventory=()=>{
+    const handleManageInventory = () => {
         navigate(`/manageInventory`);
     }
     return (
         <div>
-           
+
             <h3 className='items-header-text'>INVENTORY ITEMS</h3>
-            
+
             <div className='items-container'>
-                    {
-                        items.slice(0,6).map(item=>
-                            <Item 
+                {
+                    items.slice(0, 6).map(item =>
+                        <Item
                             key={item._id}
                             item={item}
-                
-                            >     
-                            </Item>)
-                    }
+
+                        >
+                        </Item>)
+                }
             </div>
             <button className='btn manage-inventory-btn fw-bolder' >
                 <small onClick={handleManageInventory}>MANAGE INVENTORIES</small>

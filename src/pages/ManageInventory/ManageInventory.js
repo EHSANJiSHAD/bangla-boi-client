@@ -8,14 +8,14 @@ const ManageInventory = () => {
     // const {id} = useParams();
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/book/')
+        fetch('https://murmuring-depths-02769.herokuapp.com/book/')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [items])
-    
+
 
     const navigate = useNavigate();
-    const handleAddBook = ()=>{
+    const handleAddBook = () => {
         navigate('/addItem');
     }
     return (
