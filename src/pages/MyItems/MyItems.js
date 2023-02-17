@@ -11,7 +11,7 @@ const MyItems = () => {
     console.log(myEmail)
 
     useEffect(() => {
-        fetch(`https://murmuring-depths-02769.herokuapp.com/book`)
+        fetch(`https://bangla-boi-server.vercel.app/book`)
             .then(res => res.json())
             .then(data => {
                 const myInventoryItem = data.filter(it => it.email === myEmail)

@@ -10,7 +10,7 @@ const Manage = () => {
     const [bookItem, setBookItem] = useState([]);
 
     useEffect(() => {
-        fetch(`https://murmuring-depths-02769.herokuapp.com/book/${id}`)
+        fetch(`https://bangla-boi-server.vercel.app/book/${id}`)
             .then(res => res.json())
             .then(data => setBookItem(data))
     }, [bookItem])
@@ -24,7 +24,7 @@ const Manage = () => {
         const updateQuantity = { quantity };
         console.log(updateQuantity);
         console.log(id);
-        fetch(`https://murmuring-depths-02769.herokuapp.com/book/${id}`, {
+        fetch(`https://bangla-boi-server.vercel.app/book/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -49,7 +49,7 @@ const Manage = () => {
         const quantity = (bookItem.quantity) + restockVal;
         const restock = { quantity };
         console.log(id);
-        fetch(`https://murmuring-depths-02769.herokuapp.com/book/${id}`, {
+        fetch(`https://bangla-boi-server.vercel.app/book/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -7,7 +7,7 @@ const AddItem = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        fetch(`https://murmuring-depths-02769.herokuapp.com/book`, {
+        fetch(`https://bangla-boi-server.vercel.app/book`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

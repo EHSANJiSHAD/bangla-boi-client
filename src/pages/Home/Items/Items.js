@@ -8,7 +8,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 const Items = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch(`https://murmuring-depths-02769.herokuapp.com/book`)
+        fetch(`https://bangla-boi-server.vercel.app/book`)
             .then(res => res.json())
             .then(data => {
                 setItems(data);

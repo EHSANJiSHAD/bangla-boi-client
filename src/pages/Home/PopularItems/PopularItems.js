@@ -8,7 +8,7 @@ const PopularItems = () => {
     const [popularItems, setPopularItems] = useState([]);
 
     useEffect(() => {
-        fetch('https://murmuring-depths-02769.herokuapp.com/book')
+        fetch('https://bangla-boi-server.vercel.app/book')
             .then(res => res.json())
             .then(data => setPopularItems(data))
     }, [])

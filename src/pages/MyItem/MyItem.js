@@ -10,7 +10,7 @@ const MyItem = ({ item }) => {
     const handleDeleteItem = id => {
         const proceed = window.confirm('ARE YOU SURE YOU WANT TO DELETE?');
         if (proceed) {
-            fetch(`https://murmuring-depths-02769.herokuapp.com/book/${id}`, {
+            fetch(`https://bangla-boi-server.vercel.app/book/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
